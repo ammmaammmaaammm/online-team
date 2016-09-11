@@ -1,4 +1,5 @@
 local add_user_cfg = load_from_file('data/add_user_cfg.lua')
+
 local function template_add_user(base, to_username, from_username, chat_name, chat_id)
    base = base or ''
    to_username = '@' .. (to_username or '')
@@ -57,8 +58,8 @@ local function description_rules(msg, nama)
          rules = data[tostring(msg.to.id)]["rules"]
          rules = "\nRules :\n"..rules.."\n"
       end
-      local sambutan = "Hi "..nama.." Welcome to [ "..string.gsub(msg.to.print_name, "_", " ").." ]"
-      local text = sambutan.."\n"
+      local sambutan = ">|hi "..nama.." welcome to ["..string.gsub(msg.to.print_name, "_", " ").."type |/help| to get supergroup commands|<]"
+      local text = sambutan..about..rules.."\n"
       local receiver = get_receiver(msg)
       send_large_msg(receiver, text, ok_cb, false)
    end
@@ -86,8 +87,8 @@ local function run(msg, matches)
       chat_new_user_link(msg)
       description_rules(msg, nama)
    elseif matches[1] == "chat_del_user" then
-       local bye_name = msg.action.user.first_name
-       return 'bye  '..bye_name
+       local bye_name = "@"..msg.action.user.username
+       return 'goodbye '..bye_name..'☻' 
    end
 end
 
@@ -101,8 +102,3 @@ return {
    },
    run = run
 }
-
-
-
-
-

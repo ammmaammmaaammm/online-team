@@ -1,39 +1,28 @@
-# [WaderTG](https://telegram.me/WaderTG)
+# [MeGa shield](https://telegram.me/AntiSpam_shield)
 
-# Features
+**An advanced and powerful administration bot based on [yagop/telegram-bot](https://github.com/yagop/telegram-bot) licensed under the [GNU General Public License](https://github.com/hafez16/mega-shield/blob/supergroups/LICENSE)**.
 
-* **A powerful antispam system with custom sensitivity for each group**
-* **Multiple realms (admin groups)**
-* **Recalcitrant to any kind of spamming (X/Y bots, name/photo changers, etc.)**
-* **Global banning**
-* **Broadcast to all groups**
-* **Group and  links**
-* **Kick, ban and unban by reply**
-* **Groups, ban and global ban list**
-* **Logging anything that happens in a group**
-* **Invitation by username**
-* **Group administration via private messages**
-* **Only mods, owner and admin can add bots in groups**
-* **Arabic lock**
-* **Lock TgService**
-* **Chat list**
-* **And more!**
+| Command | Description |
+|:--------|:------------|
+| [#!/]plugin text folder/name.format | for add plugin |
+| ./folder/name.format | for get plugin |
+|$cat folder/name.format | for see plugin |
 
 
 * * *
 
 ## Commands
-TeleSeed has several commands that are only usable at certain ranks.
+MeGa-shield has several commands that are only usable at certain ranks.
 
 
-## General Commands {#general_commands}
+## General Commands
 | Command | Description |
 |:--------|:------------|
 | [#!/]id | Returns group/SuperGroup ID or user id in pm. |
-| [#!/]teleseed | Returns bot information. |
+| [#!/]shield| Returns bot information. |
 
 
-## Private Message Commands {#privmsg_commands}
+## Private Message Commands
 | Command | Description |
 |:--------|:------------|
 | [#!/]help | Returns help text. |
@@ -43,11 +32,11 @@ TeleSeed has several commands that are only usable at certain ranks.
 | [#!/]join [GroupID] | Join a public chat by id |
 
 
-## Moderator commands {#moderator_commands}
+## Moderator commands 
 
 | Command | Description | Groups? | SuperGroups? |
 |:--------|:------------|:--------|:-------------|
-| [#!/]info | Returns general info about the SuperGroup. | N | Y |
+| [#!/]gpinfo | Returns general info about the SuperGroup. | N | Y |
 | [#!/]admins | Returns SuperGroup admins list. | N | Y |
 | [#!/]modlist | Returns Moderator list. | Y | Y |
 | [#!/]owner | Returns group/SuperGroup owner. _Can be used by any user_| Y | Y |
@@ -55,7 +44,7 @@ TeleSeed has several commands that are only usable at certain ranks.
 | [#!/]who | Lists all users in group *SuperGroup returns .txt document list. | Y | Y |
 | [#!/]wholist | Lists all users in group in .txt document. | Y | N |
 | [#!/]block | Kicks a user from SuperGroup **Adds user to blocked list**. | N | Y |
-| [#!/]kick | kicks user from group. | Y | N |
+| [#!/]kick | kicks user from group. | Y | Y |
 | [#!/]ban | Bans user from the group/SuperGroup. | Y | Y |
 | [#!/]unban | Unbans user from group/SuperGroup. | Y | Y |
 | [#!/]id [username<html>&#124;</html>reply] | For userID's: !id @username (**ONLY IN SuperSroups**) or reply `!id` in any group. | Y | Y |
@@ -77,26 +66,26 @@ TeleSeed has several commands that are only usable at certain ranks.
 | [#!/]rules | Retrieves the group/SuperGroup rules. | Y | Y |
 | [#!/]lock [setting](#settings-settings) | Lock group/SuperGroup settings. | Y | Y |
 | [#!/]unlock [setting](#settings-settings) | Unlock group/SuperGroup. | Y | Y |
-| [#!/]mute [mute]#mutes-mutes) | mute group message types. | Y | Y |
+| [#!/]mute [mute](#mutes-mutes) | mute group message types. | Y | Y |
 | [#!/]unmute [mute](#mutes-mutes) | unmute group message types. | Y | Y |
 | [#!/]setflood [value](#settings-settings) | Set [value] as flood sensitivity.| Y | Y |
-| [#!/]muteuser [username<html>&#124;</html>id<html>&#124;</html>reply] | Mute and unmute a user in chat. ***If a muted user posts a message, the message is deleted automaically only owners can mute <html>&#124;</html> mods and owners can unmute*** | Y | Y |
-| [#!/]mutelist | Returns list of muted users in group/SuperGroup. | Y | Y |
+| [#!/]silent [username<html>&#124;</html>id<html>&#124;</html>reply] | Mute and unmute a user in chat. ***If a muted user posts a message, the message is deleted automaically only owners can mute <html>&#124;</html> mods and owners can unmute*** | Y | Y |
+| [#!/]silentlist | Returns list of muted users in group/SuperGroup. | Y | Y |
 | [#!/]muteslist | Returns mutes for group/SuperGroup. | Y | Y |
 | [#!/]settings | Returns a list of group/SuperGroup settings. | Y | Y |
 | [#!/]stats | Returns simple message statistics in a .txt document. | Y | Y |
 | [#!/]statslist | Returns simple message statistics in a message. | Y | Y |
 | [#!/]banlist | Returns group/SuperGroup banlist. | Y | Y |
-| [#!/]clean [rules<html>&#124;</html>about<html>&#124;</html>modlist<html>&#124;</html>mutelist] | Clears rules, about, modlist, or mutelist | Y | Y |
+| [#!/]clean [rules<html>&#124;</html>about<html>&#124;</html>modlisthtml>&#124;</html>bots<html>&#124;</html>silentlist] | Clears rules, about, modlist, bots, or silentlist | Y | Y |
 | [#!/]del | Deletes a message by reply. | N | Y |
 | [#!/]res [username] | Returns users name and id by username. | Y | Y |
 | [#!/]log | Returns group logs.***In SuperGroups:*** Search for kick reasons using [#RTL<html>&#124;</html>#spam<html>&#124;</html>#lockmember] | Y | Y |
 
-## Owner commands {#moderator_commands}
+## Owner commands
 
 | Command | Description |   groups/SuperGroups? |  In private? |
 |:--------|:------------|:----------------------|:-------------|
-| [#!/]muteuser [username<html>&#124;</html>id<html>&#124;</html>reply] | Mute and unmute a user in chat.***If a muted user posts a message, the message is deleted automaically / only owners can mute / mods and owners can unmute*** |  | N |
+| [#!/]silent [username<html>&#124;</html>id<html>&#124;</html>reply] | Mute and unmute a user in chat.***If a muted user posts a message, the message is deleted automaically / only owners can mute / mods and owners can unmute*** |  | N |
 | [#!/]all | Returns all available information about current group. | Y | N |
 | [#!/]all [GroupID] | Returns all available information about group by GroupID. | Y | N |
 | [#!/]owners [GroupID] [kick<html>&#124;</html>ban<html>&#124;</html>unban] [UserID] | Kick, ban, or unban a user from a group by GroupID and UserID. | N | Y |
@@ -157,7 +146,7 @@ TeleSeed has several commands that are only usable at certain ranks.
 | [#!/]mp | (Mod Promote) Set user as a mod of supergroup. **TESTING** | N | Y | N |
 | [#!/]md | (Mod demote) Removes user from mod of supergroup. **TESTING**| N | Y | N |
 
-## Sudo Commands {#sudo_commands}
+## Sudo Commands 
 
 | Command | Groups? | SuperGroups? | Realms? |
 |:--------|:--------|:-------------|---------|
@@ -166,31 +155,31 @@ TeleSeed has several commands that are only usable at certain ranks.
 | [#!/]sync_gbans | Sync your GBans with official @TeleSeed | Y | Y | Y |
 
 
-## Settings {#settings}
+## Settings 
 
 | Command | Groups? | SuperGroups? |
 |:--------|:--------|:-------------|
 | <html>&#91;</html>#!/](un)lock links | Y | Y |
 | <html>&#91;</html>#!/](un)lock flood | Y | Y |
-| <html>&#91;</html>#!/]setflood [5-20] | Y | Y |
-| <html>&#91;</html>#!/](un)lock bots | Y | N |
+| <html>&#91;</html>#!/]setflood [1-200] | Y | Y |
+| <html>&#91;</html>#!/](un)lock bots | Y | Y |
 | <html>&#91;</html>#!/](un)lock spam | Y | Y |
 | <html>&#91;</html>#!/](un)lock arabic | Y | Y |
 | <html>&#91;</html>#!/](un)lock member | Y | Y |
-| <html>&#91;</html>#!/](un)lock leave | Y | N |
+| <html>&#91;</html>#!/](un)lock leave | Y | Y |
 | <html>&#91;</html>#!/](un)lock RTL | Y | Y |
 | <html>&#91;</html>#!/](un)lock tgservice | N | Y |
 | <html>&#91;</html>#!/](un)lock sticker | Y| Y |
 | <html>&#91;</html>#!/]public [yes<html>&#124;</html>no] | Y | Y |
 | <html>&#91;</html>#!/](un)lock strict | N | Y |
-| <html>&#91;</html>#!/](un)lock contacts | N | Y |
+
 /lock [setting] and /unlock [setting]: sets allowed actions and content for groups/SuperGroups
 	***/lock strict*** in a supergroup, if strict is locked users will be kicked for violations of settings or mutes
 
 /public [yes|no]: Set group/SuperGroup visibility in pm `!chats` or `!chatlist` commands.
 
 
-### Mutes {#mutes}
+### Mutes
 
 | Command |
 |:--------|
@@ -205,7 +194,7 @@ TeleSeed has several commands that are only usable at certain ranks.
 
 **SuperGroups: A "muted" message type is auto-deleted if posted **
 
-### Ranks {#ranks}
+### Ranks 
 
 | Rank | Description |
 |:------|:------------|
@@ -221,33 +210,67 @@ Each higher status inherits the privileges of the lower status.
 
 **You can use "#", "!", or "/" to begin all commands
 
+* * *
+
 # Installation
+
 ```sh
+# Install dependencies.
+# Tested on Ubuntu 14.04. For other OSs, check out https://github.com/yagop/telegram-bot/wiki/Installation
 sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev make unzip git redis-server autoconf g++ libjansson-dev libpython-dev expat libexpat1-dev
 
+# Let's install the bot.
 cd $HOME
-git clone https://github.com/groupforspeed/WaderTG.git
-cd WaderTG
-chmod +x launchfix2.sh
+git clone https://github.com/hafez16/mega-shield.git
+cd mega-shield
 chmod +x launch.sh
-chmod +x autolaunch.sh
-./launchfix2.sh install
-cd .luarocks
-cd bin
-./luarocks-5.2 install luafilesystem
-./luarocks-5.2 install lub
-./luarocks-5.2 install luaexpat
-cd $HOME
-cd WaderTG
-./launchfix2.sh install
-./autolaunch.sh
+./launch.sh install
+./launch.sh # Enter a phone number & confirmation code.
 ```
-# ANTI CRASH
+### One command
+To install everything in one command (useful for VPS deployment) on Debian-based distros, use:
 ```sh
-tmux new-session -s script "bash steady.sh -t"
+#https://github.com/yagop/telegram-bot/wiki/Installation
+sudo apt-get update; sudo apt-get upgrade -y --force-yes; sudo apt-get dist-upgrade -y --force-yes; sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-dev lua-socket lua-sec lua-expat libevent-dev libjansson* libpython-dev make unzip git redis-server g++ autoconf -y --force-yes && git clone https://github.com/hafez16/Tmega-shield.git && cd mega-shield && chmod +x launch.sh && ./launch.sh install && ./launch.sh
 ```
-# NEW TERMINAL ANTI CRASH
-```sh
-cd WaderTG
-screen ./launch.sh
+
+* * *
+
+### Realm configuration
+
+After you run the bot for first time, send it `!id`. Get your ID and stop the bot.
+
+Open ./data/config.lua and add your ID to the "sudo_users" section in the following format:
 ```
+  sudo_users = {
+    110626080,
+    103649648,
+    111020322,
+    0,
+    YourID
+  }
+```
+Then restart the bot.
+
+Create a realm using the `!createrealm` command.
+
+* * *
+
+**Creating a LOG SuperGroup**
+	-For GBan Log
+
+	1. Create a group using the `!creategroup` command.
+	2. Add two members or bots, then use `#Tosuper` to convert to a SuperSroup.
+	3. Use the `#addlog` command and your ***LOG SuperGroup(s)*** will be set.
+	Note: you can set multiple Log SuperGroups
+
+* * *
+
+# Support and development
+
+Check out this [tutorial by Telegram Geeks](http://telegramgeeks.com/2016/01/teleseed-tutorial/) for further assistance with setup and installation.
+
+[hafez (developer)](https://telegram.me/hafez1116hafez)
+[amir hosein (developer)](https://telegram.me/amirho3ien911)
+[mostafa (manager)](https://telegram.me/Eblis_alone)
+[mohammad (sponsor)](https://telegram.me/Mmd_hei)
